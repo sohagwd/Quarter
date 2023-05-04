@@ -1,0 +1,71 @@
+/*============== apartments part start ===============*/
+#apartments{
+    @include pgap(100px,100px,0px,0px);
+
+    .apart_head{
+        text-align: center;
+        padding-bottom: 60px;
+        h4{
+            background-color: $iconbg;
+            @include pgap(8px,8px,20px,20px);
+            display: inline-block;
+            border-radius: 25px;
+            @include fonts('Poppins',18px,600,$randomecolor);
+            text-transform: capitalize;
+        }
+        h3{
+            @include fonts('Poppins',40px,700,$menucolor);
+            text-transform: capitalize;
+            padding-top: 26px;
+        }
+    }
+
+    .apart_text_main{
+        background-color: $randombg;
+        @include pgap(70px,70px,70px,70px);
+        h4{
+            @include fonts('Poppins',28px,600,$comoncolor);
+            text-transform: capitalize;
+            @include pgap(0px,30px,0px,0px);
+        }
+        p{
+            @include fonts('Montserrat',16px,500,$comoncolor);  
+            line-height: 24px;
+            padding-right: 95px;
+        }
+
+        .apart_item_li{
+           display: flex;
+           padding-top: 40px;
+           .apart_pra1{
+               p{
+                @include fonts('Montserrat',14px,500,$comoncolor); 
+                position: relative;
+                margin-bottom: 20px;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 95%;
+                    height: 1px;
+                    right: -90px;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    border: 1px dashed;
+                    border-color: $comoncolor;
+                    z-index: 1;
+                }
+               }
+           }
+           .apart_pra2{
+               margin-left: 100px;
+               p{
+                @include fonts('Montserrat',14px,500,$comoncolor);
+                margin-bottom: 20px;
+               }
+            
+           }
+        }
+    }
+}

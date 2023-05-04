@@ -1,0 +1,80 @@
+/*============== aminities part start ===============*/
+#aminities{
+    @include pgap(100px,100px,0px,0px);
+
+    .aminit_head{
+        text-align: center;
+        padding-bottom: 60px;
+        h4{
+            background-color: $iconbg;
+            @include pgap(8px,8px,20px,20px);
+            display: inline-block;
+            border-radius: 25px;
+            @include fonts('Poppins',18px,600,$randomecolor);
+            text-transform: capitalize;
+        }
+        h3{
+            @include fonts('Poppins',40px,700,$menucolor);
+            text-transform: capitalize;
+            padding-top: 26px;
+        }
+    }
+
+    .aminit_item{
+        @include pgap(40px,40px,35px,35px);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        text-align: center;
+        transition: all linear .3s;
+        margin-bottom: 50px;
+        .aminit_icon{
+            i{
+                background-color: $iconbg;
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 35px;
+                color: $randomecolor;
+                border-radius: 50%;
+                transition: all linear .3s;
+            }
+        }
+        h3{
+            @include fonts('Poppins',20px,600,$menucolor);
+            text-transform: capitalize;
+            @include pgap(25px,20px,0px,0px);
+            transition: all linear .3s;
+        }
+        .aminit_btn{
+            position: relative;
+            bottom: -55px;
+            i{
+               background-color: #fff;
+               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+               width: 35px;
+               height: 35px;
+               text-align: center;
+               line-height: 35px;
+               font-size: 18px;
+               border-radius: 50%;
+               color: $paracolor;
+               transition: all linear .3s;
+            }
+        }
+
+        &:hover{
+            background-color: $randombg;
+        }
+        &:hover .aminit_icon i{
+            background-color: #fff;
+            
+        }
+        &:hover h3{
+            color: #fff;
+
+        }
+        &:hover .aminit_btn i{
+            color: $randomecolor;
+        }
+    }
+}

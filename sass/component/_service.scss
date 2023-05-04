@@ -1,0 +1,59 @@
+/*============== service part start ===============*/
+#service{
+    @include pgap(100px,100px,0px,0px);
+    background-color: $bannerbg;
+
+    .service_head{
+        text-align: center;
+        h4{
+            background-color: $iconbg;
+            @include pgap(8px,8px,20px,20px);
+            display: inline-block;
+            border-radius: 25px;
+            @include fonts('Poppins',18px,600,$randomecolor);
+            text-transform: capitalize;
+        }
+        h3{
+            @include fonts('Poppins',40px,700,$menucolor);
+            text-transform: capitalize;
+            padding-top: 26px;
+        }
+    }
+
+    .service_main{
+        background-color: #fff;
+        @include pgap(40px,35px,30px,30px);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+
+        margin-top: 60px;
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: $randombg;
+        }
+        .service_item{
+            text-align: center;
+            h3{
+                @include fonts('Poppins',28px,600,$menucolor);
+                text-transform: capitalize;
+                padding-bottom: 20px;
+                padding-top: 15px;
+            }
+            p{
+                @include fonts('Montserrat',14px,400,$paracolor);  
+                line-height: 24px;
+                padding-bottom: 27px;
+            }
+            a{
+                @include fonts('Poppins',16px,400,$randomecolor);
+                text-transform: capitalize;
+              
+            }
+        }
+    }
+}

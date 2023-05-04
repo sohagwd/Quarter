@@ -1,0 +1,111 @@
+/*============== testimunail part start ===============*/
+#testimunail{
+    background: url(../images/testimunail_bg.jpg) center no-repeat;
+    background-size: cover;
+    @include pgap(70px,100px,0px,0px);
+    position: relative;
+    .left{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $randombg;
+        color: $comoncolor;
+        text-align: center;
+        line-height: 40px;
+        position: absolute;
+        content: '';
+        left: 115px;
+        top:55%;
+        transition: all linear .3s;
+        cursor: pointer;
+    }
+    .right{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $randombg;
+        color: $comoncolor;
+        text-align: center;
+        line-height: 40px;
+        position: absolute;
+        right:115px;
+        top:55%;
+        cursor: pointer;
+    }
+    .testi_head{
+        text-align: center;
+        padding-bottom: 60px;
+        h4{
+            background-color: $iconbg;
+            @include pgap(8px,8px,20px,20px);
+            display: inline-block;
+            border-radius: 25px;
+            @include fonts('Poppins',18px,600,$randomecolor);
+            text-transform: capitalize;
+        }
+        h3{
+            @include fonts('Poppins',40px,700,$menucolor);
+            text-transform: capitalize;
+            padding-top: 26px;
+        }
+    }
+
+    .testi_item{
+        @include pgap(40px,40px,30px,30px);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @include mgap(10px,10px,12px,12px);
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 5px;
+            background-color: $randombg;
+            transition: all linear .3s;
+        }
+        &:hover::after{
+            width: 100%
+        }
+        &:hover .testi_text p i{
+            color: $randomecolor;
+        }
+        .testi_text{
+            p{
+                @include fonts('Montserrat',16px,500,$paracolor);  
+                line-height: 24px;
+                padding-right: 52px;
+                i{
+                    font-size: 20px;
+                    margin-right: 5px;
+                    transition: all linear .3s;
+                }
+            }
+        }
+       .testi_info{
+           display: flex;
+           align-items: center;
+           padding-top: 28px;
+           .testi_img{
+               max-width: 60px;
+               margin-right: 15px;
+               img{
+                   border-radius: 100%;
+               }
+           }
+           .testi_name{
+               h5{
+                @include fonts('Poppins',18px,600,$menucolor);
+                text-transform: capitalize;
+                padding-bottom: 10px;
+               }
+               p{
+                @include fonts('Montserrat',14px,400,$paracolor); 
+                text-transform: uppercase;
+               }
+           }
+       }
+    }
+
+}

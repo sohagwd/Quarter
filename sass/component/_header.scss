@@ -1,0 +1,28 @@
+/*============== header part start ===============*/
+#header{
+    background-color: $headerbg;
+    @include pgap(10px,10px,0px,0px);
+    .header_info{
+        p{
+            display: inline-block;
+            @include fonts('Nunito Sans',14px,400,#fff);
+            margin-right: 20px;
+            transition: all linear .3s;
+            &:hover{
+                color: $randomecolor;
+            }
+            i{
+                color: $randomecolor;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .heade_socile{
+        text-align: right;
+        a{
+            color: $comoncolor;
+            margin-left: 10px;
+        }
+    }
+}

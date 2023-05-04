@@ -1,0 +1,81 @@
+/*============== navber part start ===============*/
+.navbar{
+    padding: 0;
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                padding-right: 0;
+                padding-left: 0;
+                
+            }
+        }
+    }
+}
+
+.navber_main{
+    .logo{
+        padding-top: 0px;
+    }
+    .navber_menu{
+        li{
+            line-height: 80px;
+            @include pgap(0px,0px,17px,17px);
+            a{
+                @include fonts('Nunito Sans',18px,800,$menucolor );
+                text-transform: uppercase;
+                transition: all linear .3s;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 0%;
+                    height: 3px;
+                    background-color: $randombg;
+                    bottom: 25px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: all linear .3s;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                &:hover{
+                    color: $randomecolor;
+                }
+            }
+            .active{
+                position: relative;
+                color: $randomecolor;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    background-color: $randombg;
+                    bottom: 25px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: all linear .3s;
+                } 
+            }
+        }
+    }
+
+    .navber_socile{
+        i{
+            background-color: #fff;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            color: $menucolor;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            @include mgap(0px,0px,6px,6px);
+            transition: all linear .3s;
+            &:hover{
+                background-color: $randombg;
+                color: $comoncolor;
+            }
+        }
+    }
+}

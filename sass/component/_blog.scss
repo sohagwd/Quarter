@@ -1,0 +1,117 @@
+/*============== blog part start ===============*/
+#blog{
+    @include pgap(100px,100px,0px,0px);
+
+    .blog_head{
+        text-align: center;
+        padding-bottom: 60px;
+        h4{
+            background-color: $iconbg;
+            @include pgap(8px,8px,20px,20px);
+            display: inline-block;
+            border-radius: 25px;
+            @include fonts('Poppins',18px,600,$randomecolor);
+            text-transform: capitalize;
+        }
+        h3{
+            @include fonts('Poppins',40px,700,$menucolor);
+            text-transform: capitalize;
+            padding-top: 26px;
+        }
+    }
+
+    .blog_item{
+        @include mgap(0px,10px,12px,12px);
+        .blog_img{
+            overflow: hidden;
+            img{
+                transition: all linear .3s;
+            }
+        }
+        .blog_info_main{
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            @include pgap(30px,30px,30px,30px);
+
+            .blog_info1{
+                display: flex;
+                align-items: center;
+                .blog_pra1{
+                    a{
+                        @include fonts('Montserrat',16px,500,$paracolor);
+                        transition: all linear .3s;
+                        &:hover{
+                            color: $randomecolor;
+                        }
+                        i{
+                            color: $randomecolor;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                .blog_pra2{
+                    margin-left: 35px;
+                    a{
+                        @include fonts('Montserrat',16px,500,$paracolor);
+                        transition: all linear .3s;
+                        &:hover{
+                            color: $randomecolor;
+                        } 
+                        i{
+                            color: $randomecolor;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+            .blog_text{
+                @include pgap(20px,0px,0px,0px);
+                h4{
+                    @include fonts('Poppins',23px,600,$menucolor);
+                    text-transform: capitalize;
+                    line-height: 24px;
+                    @include pgap(0px,20px,0px,0px);
+                    position: relative;
+                    transition: all linear .3s;
+                    &:hover{
+                        color: $randomecolor;
+                    }
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: -1px;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $paracolor;
+                    }
+                    
+                   
+                }
+            }
+
+            .blog_date{
+                display: flex;
+                align-items: center;
+                @include pgap(25px,0px,0px,0px);
+                p{
+                    @include fonts('Montserrat',14px,400,$paracolor);
+                    i{
+                        color: $randomecolor;
+                        margin-right: 5px;
+                    }
+                }
+                a{
+                    @include fonts('Montserrat',16px,500,$randomecolor);
+                    margin-left: 100px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &:hover .blog_img img{
+            transform: scale(1.2);
+        }
+    }
+}

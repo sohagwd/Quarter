@@ -1,0 +1,79 @@
+/*============== aboutus part start ===============*/
+#aboutus{
+    @include pgap(100px,100px,0px,0px);
+    .aboutus_item{
+       .about_text{
+        h4{
+            background-color: $iconbg;
+            @include pgap(8px,8px,20px,20px);
+            display: inline-block;
+            border-radius: 25px;
+            @include fonts('Poppins',18px,600,$randomecolor);
+            text-transform: capitalize;
+        }
+        h3{
+            @include fonts('Poppins',40px,700,$menucolor);
+            text-transform: capitalize;
+            line-height: 50px;
+            @include mgap(35px,35px,0px,0px);
+        }
+        p{
+            @include fonts('Montserrat',14px,400,$paracolor);  
+            line-height: 24px;
+            padding-right: 120px;
+        }
+       }
+
+       .aboutus_text2{
+        @include mgap(50px,50px,0px,0px);
+        h6{
+            @include fonts('Montserrat',14px,400,$paracolor); 
+            padding-left: 33px;
+            margin-top: 20px;
+            position: relative;
+            &:after{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 2px;
+                background-color: $randombg;
+            }
+        }
+       }
+
+       .aboutus_item2{
+           display: flex;
+           margin-bottom: 60px;
+           .aboutus_item3{
+               position: relative;
+               margin-right: 25px;
+               &:last-child::after{
+                   display: none;
+               }
+               &::after{
+                   position: absolute;
+                   content: '';
+                    right: -15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 2px;
+                    height: 50px;
+                    background-color: #5c727d;
+               }
+               p{
+                @include fonts('Montserrat',14px,400,$paracolor);  
+                i{
+                    margin-left: 5px;
+                }
+               }
+               h6{
+                @include fonts('Montserrat',14px,400,$paracolor);  
+                padding-top: 10px;
+               }
+           }
+       }
+    }
+}
